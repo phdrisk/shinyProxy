@@ -1,4 +1,9 @@
 # shinyProxy
+## comandos necessarios
+```
+systemctl daemon-reload
+systemctl restart docker
+```
 ```
 https://lukesingham.com/shiny-containers-with-shinyproxy/
 ```
