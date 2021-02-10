@@ -1,4 +1,13 @@
 # shinyProxy
+```
+https://lukesingham.com/shiny-containers-with-shinyproxy/
+```
+
+## Arquivo application
+```
+/etc/shinyproxy/application.yml
+
+```
 ## ERRO JAVA 
 ```
 edit /lib/systemd/system/docker.service
