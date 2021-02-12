@@ -42,7 +42,11 @@ RUN apt-get update && apt-get install -y \
 # basic shiny functionality
 RUN R -e "install.packages(c('shiny', 'shinyMobile', 'shinyWidgets','shinycssloaders'), repos='https://cloud.r-project.org/')"
 
+
+
 # basic  functionality
+# NECESSARIO PARA O QUANTMOD
+RUN sudo apt-get install -y curl libcurl4-openssl-dev libssl-dev
 RUN R -e "install.packages(c('quantmod', 'quadprog', 'ggplot2','xts','dygraphs','utf8','stringr','BBmisc'), repos='https://cloud.r-project.org/')"
 
 # basic  functionality
