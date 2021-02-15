@@ -1,6 +1,7 @@
 # shinyProxy
 ## comandos necessarios
 ```
+docker build -t 'nomeNovaImagem' .
 systemctl daemon-reload
 systemctl restart docker
 ```
