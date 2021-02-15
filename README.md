@@ -33,7 +33,8 @@ RUN apt-get update && apt-get install -y \
     libcairo2-dev \
     libxt-dev \
     libssl-dev \
-    libssh2-1-dev
+    libssh2-1-dev \
+    libxml2
 
 # system library dependency for the euler app
 RUN apt-get update && apt-get install -y \
@@ -50,7 +51,7 @@ RUN sudo apt-get install -y curl libcurl4-openssl-dev libssl-dev
 RUN R -e "install.packages(c('quantmod', 'quadprog', 'ggplot2','xts','dygraphs','utf8','stringr','BBmisc'), repos='https://cloud.r-project.org/')"
 
 # basic  functionality
-RUN R -e "install.packages(c('zeallot', 'DT', 'mFilter','tseries','lubridate','nnet','BBmisc'), repos='https://cloud.r-project.org/')"
+RUN R -e "install.packages(c('zeallot', 'DT', 'mFilter','tseries','lubridate','nnet'), repos='https://cloud.r-project.org/')"
 
 # basic  functionality
 ## RUN R -e "install.packages(c('BETS','perfomanceAnalytics'), repos='https://cloud.r-project.org/')"
