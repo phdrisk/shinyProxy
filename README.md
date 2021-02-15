@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libssh2-1-dev \
     libxml2  \ # devtools
+    libxml2-dev
     libmysql++-dev #BETS
 # system library dependency for the euler app
 RUN apt-get update && apt-get install -y \
@@ -55,7 +56,7 @@ RUN R -e "install.packages(c('quantmod', 'quadprog', 'ggplot2','xts','dygraphs',
 RUN R -e "install.packages(c('zeallot', 'DT', 'mFilter','tseries','lubridate','nnet'), repos='https://cloud.r-project.org/')"
 
 # basic  functionality
-## RUN R -e "install.packages(c('BETS','PerfomanceAnalytics'), repos='https://cloud.r-project.org/')"
+## RUN R -e "install.packages(c('xml2','BETS','PerfomanceAnalytics'), repos='https://cloud.r-project.org/')"
 
 # copy the app to the image
 RUN mkdir /root/webapp
