@@ -4,6 +4,13 @@
 docker build -t 'nomeNovaImagem' .
 systemctl daemon-reload
 systemctl restart docker
+
+variavel de ambiente
+SHINYPROXY_USERNAME: the name of the user, as used when logging in;
+SHINYPROXY_USERGROUPS: the groups the authenticated user is a member of, as a comma-separated value.
+
+USO: 
+userName <- Sys.getenv("SHINYPROXY_USERNAME")
 ```
 ```
 https://lukesingham.com/shiny-containers-with-shinyproxy/
