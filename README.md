@@ -6,8 +6,9 @@ systemctl daemon-reload
 systemctl restart docker
 
 variavel de ambiente
-SHINYPROXY_USERNAME: the name of the user, as used when logging in;
-SHINYPROXY_USERGROUPS: the groups the authenticated user is a member of, as a comma-separated value.
+SHINYPROXY_USERNAME: o nome do usuário, conforme usado ao fazer login
+SHINYPROXY_USERGROUPS: os grupos dos quais o usuário autenticado é membro, como um valor separado por vírgula
+SHINYPROXY_OIDC_ACCESS_TOKEN: o token de acesso de conexão OpenId que pode ser reutilizado para invocar outra API de dentro do aplicativo Shiny
 
 USO: 
 userName <- Sys.getenv("SHINYPROXY_USERNAME")
