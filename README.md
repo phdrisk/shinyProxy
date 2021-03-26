@@ -61,6 +61,7 @@ proxy:
   - id: 06_tabsets
     container-cmd: ["R", "-e", "shinyproxy::run_06_tabsets()"]
     container-image: openanalytics/shinyproxy-demo
+    container-volumes:["/pastaNoServidor:/pastaNoDocker"] ** [IMPORTANTE] -> a pasta /pastaNoDocker nao pode ser criado pelo DOCKERFILE
     
     MAPEANDO O VOLUME
     container-volumes: [nomeVolume:/pastaDentrodo App] ( criado no dockerFile *1)
@@ -123,7 +124,7 @@ RUN R -e "install.packages(c('zeallot', 'DT', 'mFilter','tseries','lubridate','n
 RUN mkdir /root/webapp
 COPY webapp /root/webapp
 
-RUN mkdir /root/webapp/dados (*1) -> criado para o volume
+*** RUN mkdir /root/webapp/dados (*1) -> criado para o volume ( NAO FUNCIONA)
 
 
 # configucao da porta
@@ -131,5 +132,5 @@ COPY Rprofile.site /usr/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/root/webapp')"]
+CMD ["R", "-e", "shiny::runApp('/root/webapp')"] 
 ```
